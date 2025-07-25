@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #d3cce3, #e9e4f0); /* light background */
+    padding: 20px;
+}
+
+.todo-app {
+    background: #ffffff;
+    width: 100%;
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 25px 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.todo-app h2 {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.todo-app h2 img {
+    width: 25px;
+    margin-left: 10px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f0f0f0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+#input-box {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    background: #7a42f4;
+    color: white;
+    font-size: 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: #6a36e3;
+}
+
+ul li {
+    list-style: none;
+    font-size: 18px;
+    padding: 12px 8px 12px 40px;
+    position: relative;
+    user-select: none;
+    cursor: pointer;
+    background: #fdfdfd;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border-left: 5px solid #ccc;
+}
+
+/* Custom checkbox style using before */
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+    background: #eee;
+    top: 12px;
+    left: 10px;
+    border: 2px solid #aaa;
+}
+
+/* When task is checked */
+ul li.checked {
+    text-decoration: line-through;
+    color: #888;
+    background: #e7e7e7;
+}
+
+ul li.checked::before {
+    content: '✓';
+    font-size: 16px;
+    color: green;
+    text-align: center;
+    line-height: 22px;
+}
+
+/* Delete button (×) style */
+ul li span {
+    position: absolute;
+    right: 15px;
+    top: 12px;
+    font-size: 20px;
+    color: #888;
+    cursor: pointer;
+}
+
+ul li span:hover {
+    color: red;
+}
